@@ -11,9 +11,11 @@ public class Ej15 {
         System.out.println("Dime el tiempo en segundos: ");
         Scanner inputValue = new Scanner(System.in);
         t = inputValue.nextInt();
-        min = t / 60;
         hora = t / 3600;
-        seg = t % 60;
+        t = t % 3600;
+        min = t / 60;
+        t = t % 60;
+        seg = t;
 
         System.out.println(+t+ " segundos equivalen a "+hora+ " horas, "+min+" minutos y "+seg+ " segundos");
 
