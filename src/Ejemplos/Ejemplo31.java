@@ -6,16 +6,13 @@ public class Ejemplo31 {
     public static void main(String[] args) {
         double saldo;
         int num;
-        double dinero_incial;
-        double cajero;
         double importe;
         double retirada;
 
         System.out.println("Introduce el dinero: ");
 
         Scanner inputValue = new Scanner(System.in);
-        dinero_incial = inputValue.nextDouble();
-        cajero = dinero_incial;
+        saldo = inputValue.nextDouble();
 
         do {
             System.out.println("Introduce 1 para ingresar, 2 para retirar o 0 para salir");
@@ -23,14 +20,16 @@ public class Ejemplo31 {
                 if (num == 1) {
                     System.out.println("Introduce el dinero a ingresar: ");
                     importe = inputValue.nextDouble();
-                    saldo = cajero + importe;
+                    saldo = saldo + importe;
                     System.out.println("El saldo total es de: "+saldo);
-                } else if (num == 2);
+                } else if (num == 2) {
                     System.out.println("Introduce el saldo a retirar: ");
                     retirada = inputValue.nextDouble();
-                    saldo = cajero - retirada;
-                    System.out.println("El saldo total es: "+saldo);
-        } while (num == 0);
+                    saldo = saldo - retirada;
+                    System.out.println("El saldo total es: " + saldo);
+                }
+    }while (num != 0);
         inputValue.close();
-    }
+        }
+
 }
