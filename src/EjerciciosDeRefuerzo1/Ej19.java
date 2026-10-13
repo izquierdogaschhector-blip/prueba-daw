@@ -7,7 +7,6 @@ public class Ej19 {
         int vel_max;
         int dis_cam;
         int sec;
-        int vel_coche;
         double vel_media = 0;
         Scanner inputValue = new Scanner(System.in);
         System.out.println("Qué máximo de velocidad tiene la carretera?");
